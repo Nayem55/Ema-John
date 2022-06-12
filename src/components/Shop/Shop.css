@@ -1,0 +1,136 @@
+.shop-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.product-container {
+    padding: 80px 144px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cart-container {
+    width: 100%;
+    position: sticky;
+    top: 75px;
+    height: 100vh;
+    background-color: #FFE0B3;
+    transition: all 500ms ease-in;
+}
+
+
+.cart-icon{
+    color: #FF9900;
+}
+
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 05px;
+}
+
+.btn-container button {
+    color: white;
+    height: 48px;
+    margin: 5px;
+    border: none;
+    width: 50%;
+}
+
+.clear {
+    background-color: #FF3030;
+}
+
+.clear:hover {
+    background-color: #ff303000;
+    border: 2px solid #FF3030;
+    color: black;
+
+}
+
+.review {
+    background-color: #FF9900;
+
+}
+
+.review:hover {
+    background-color: #ff990000;
+    border: 2px solid #FF9900;
+    color: black;
+}
+
+.cart-info {
+    padding: 10px 20px;
+    color: #2A414F;
+}
+
+.total {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+@media (max-width: 1749px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .clear {
+        height: 40px;
+    }
+
+    .review {
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .shop-container {
+        display: flex;
+        flex-direction: column-reverse;
+        width: auto;
+    }
+
+    .product-container {
+        padding: 80px 10px;
+    }
+
+    .cart-container {
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .hide{
+        position: absolute;
+        top: -700px;
+    }
+
+    .show{
+        position: relative;
+    }
+}
+
+@media (max-width: 700px) {
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        align-items: center;
+    }
+
+    .cart-container {
+        margin: 00px 00px;
+        border: 1px solid #2A414F;
+        height: auto;
+    }
+
+    .cart-info {
+        padding: 0px 20px;
+    }
+}

@@ -1,0 +1,58 @@
+.header {
+    width: 100vw;
+    height: auto;
+    background-color: #1C2B35;
+    padding: 10px 140px;
+    font-size: 17px;
+}
+
+.navLink a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
+.navLink a:hover {
+    color: orange;
+}
+.navLink a:focus {
+    color: orange;
+}
+
+.cart-icon {
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+    .header {
+        padding: 10px;
+        font-family: leto;
+    }
+
+
+    .navLink a:hover {
+        background-color: orange;
+        color: white;
+        border-radius: 10px;
+    }
+    .navLink a:focus {
+        background-color: orange;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .cart-icon {
+        display: block;
+        height: 25px;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .cart-icon {
+        height: 20px;
+    }
+}
