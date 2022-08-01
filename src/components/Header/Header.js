@@ -33,6 +33,7 @@ const Header = ({open , setOpen}) => {
               <Link to="/orders">Orders</Link>
               <Link to="/inventory">Inventory</Link>
               <Link to="/about">About</Link>
+              <Link to="/login">Login</Link>
             </ul>
           </div>
         </div>

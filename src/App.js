@@ -8,6 +8,8 @@ import Inventory from './components/Inventory/Inventory';
 import About from './components/About/About';
 import NotFound from './components/NotFound/NotFound';
 import Purchase from './components/Purchase/Purchase';
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 
 function App() {
   const [open , setOpen] = useState(false)
@@ -21,6 +23,8 @@ function App() {
       <Route path='/inventory' element={<Inventory/>}></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/purchase' element={<Purchase/>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
+      <Route path='/signup' element={<SignUp/>}></Route>
       <Route path='*' element={<NotFound/>}></Route>
     </Routes>
     

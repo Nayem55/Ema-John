@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Review from "../Review/Review";
 import { removeFromDb } from "../../utilities/fakedb";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Orders = ({ open }) => {
   const [products] = useProduct();
