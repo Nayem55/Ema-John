@@ -61,8 +61,8 @@ const Orders = ({ open }) => {
               Clear Cart <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
             </button>
             {/* <Link className="w-100" to={"/purchase"} > */}
-                <button onClick={()=>navigate('/purchase')} className="review">
-                  Purchase Order
+                <button onClick={()=>navigate('/shipment')} className="review">
+                  Proceed Order
                   <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                 </button>
             {/* </Link> */}

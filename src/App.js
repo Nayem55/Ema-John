@@ -11,6 +11,7 @@ import Purchase from './components/Purchase/Purchase';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import Shipment from './components/Shipment/Shipment';
 
 function App() {
   const [open , setOpen] = useState(false)
@@ -24,6 +25,7 @@ function App() {
       <Route path='/inventory' element={<Inventory/>}></Route>
       <Route path='/about' element={<About/>}></Route>
       <Route path='/purchase' element={<RequireAuth> <Purchase/> </RequireAuth>}></Route>
+      <Route path='/shipment' element={<RequireAuth> <Shipment/> </RequireAuth>}></Route>
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/signup' element={<SignUp/>}></Route>
       <Route path='*' element={<NotFound/>}></Route>

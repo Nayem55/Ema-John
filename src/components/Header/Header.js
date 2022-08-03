@@ -4,8 +4,16 @@ import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from "../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Header = ({open , setOpen}) => {
+  const [user] = useAuthState(auth);
+  const handleSignOut=()=>{
+    signOut(auth)
+  }
+  
   return (
     <div className="fixed-top">
       <nav className="navbar navbar-expand-lg navbar-dark header">
@@ -33,7 +41,7 @@ const Header = ({open , setOpen}) => {
               <Link to="/orders">Orders</Link>
               <Link to="/inventory">Inventory</Link>
               <Link to="/about">About</Link>
-              <Link to="/login">Login</Link>
+             {user? <Link to="/login" onClick={handleSignOut}>Sign out</Link> : <Link to="/login">Login</Link>}
             </ul>
           </div>
         </div>
