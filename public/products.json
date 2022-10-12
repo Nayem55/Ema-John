@@ -314,7 +314,7 @@
   {
     "id": "9b169efb-0966-40f3-b9c2-79b16cb96388",
     "category": "Men's Boot",
-    "name": "Superstar Boots",
+    "name": "Superstar BOOTS",
     "seller": "Addidas",
     "price": 151,
     "stock": 13,
@@ -522,7 +522,7 @@
   {
     "id": "4a0090e7-b65d-4f6e-a42b-5603a3f51883",
     "category": "Bag",
-    "name": "3-Stripes Backpack 2.0",
+    "name": "3-Stripes BAG 2.0",
     "seller": "Addidas",
     "price": 74,
     "stock": 7,
@@ -535,7 +535,7 @@
   {
     "id": "0ac76ee7-53f1-45ba-b5ca-81ff6063bc1a",
     "category": "Bag",
-    "name": "Trefoil Backpack",
+    "name": "Trefoil BAG",
     "seller": "Addidas",
     "price": 65,
     "stock": 3,
@@ -548,7 +548,7 @@
   {
     "id": "1770549a-571b-4baf-bc58-7bae7a228dcb",
     "category": "Bag",
-    "name": "Santiago Lunch Bag",
+    "name": "Santiago Lunch BAG",
     "seller": "Addidas",
     "price": 63,
     "stock": 10,
@@ -561,7 +561,7 @@
   {
     "id": "24b20ba6-9024-4b0a-b8a9-cf937521cede",
     "category": "Bag",
-    "name": "Blue Version Backpack",
+    "name": "Blue Version BAG",
     "seller": "Addidas",
     "price": 87,
     "stock": 15,
@@ -574,7 +574,7 @@
   {
     "id": "a7231186-0316-4cc0-94bf-4f496a382346",
     "category": "Bag",
-    "name": "Defender Backpack",
+    "name": "Defender BAG",
     "seller": "Addidas",
     "price": 96,
     "stock": 10,
@@ -587,7 +587,7 @@
   {
     "id": "35ac57f9-870a-4299-aac8-e5d8d2716b31",
     "category": "Bag",
-    "name": "Excel Backpack",
+    "name": "Excel BAG",
     "seller": "Addidas",
     "price": 62,
     "stock": 18,
@@ -600,7 +600,7 @@
   {
     "id": "c50bebaf-2633-4674-aba2-25be34bfdbba",
     "category": "Bag",
-    "name": "Alliance Sackpack",
+    "name": "Alliance BAG",
     "seller": "Addidas",
     "price": 99,
     "stock": 16,
@@ -613,7 +613,7 @@
   {
     "id": "ff5bf372-7ed1-4904-aac5-7a2ce98e70ef",
     "category": "Bag",
-    "name": "R.Y.V. Toploader Backpack",
+    "name": "R.Y.V. Toploader BAG",
     "seller": "Addidas",
     "price": 56,
     "stock": 19,
@@ -626,7 +626,7 @@
   {
     "id": "83ef9902-0224-48d3-ba7c-eeff3e678d13",
     "category": "Bag",
-    "name": "Adicolor Archive Backpack",
+    "name": "Adicolor Archive BAG",
     "seller": "Addidas",
     "price": 84,
     "stock": 5,
@@ -639,7 +639,7 @@
   {
     "id": "7490b4c8-8242-4de5-b161-b8ac96ea0e0b",
     "category": "Bag",
-    "name": "R.Y.V. Backpack",
+    "name": "R.Y.V. BAG",
     "seller": "Addidas",
     "price": 67,
     "stock": 10,
@@ -652,7 +652,7 @@
   {
     "id": "b1872b25-ba91-48ed-9468-1822df0637b9",
     "category": "Cap",
-    "name": "Relaxed Strap-Back Hat",
+    "name": "Relaxed Strap-Back CAP",
     "seller": "Addidas",
     "price": 30,
     "stock": 6,
@@ -665,7 +665,7 @@
   {
     "id": "ea028038-4e9d-42bf-b033-88aa5e6cc477",
     "category": "Cap",
-    "name": "Icon Snapback Hat",
+    "name": "Icon Snapback CAP",
     "seller": "Addidas",
     "price": 21,
     "stock": 13,
@@ -678,7 +678,7 @@
   {
     "id": "d48e0fcb-904c-499e-93a0-312d77e6dbf9",
     "category": "Cap",
-    "name": "Superlite Hat",
+    "name": "Superlite CAP",
     "seller": "Addidas",
     "price": 11,
     "stock": 18,
@@ -691,7 +691,7 @@
   {
     "id": "71dfc7f9-844b-4be7-816f-891a5cbaa0f1",
     "category": "Cap",
-    "name": "Superlite Hat",
+    "name": "Superlite CAP",
     "seller": "Addidas",
     "price": 10,
     "stock": 10,
@@ -704,7 +704,7 @@
   {
     "id": "a9d89eac-7418-4bca-a484-c8238c356270",
     "category": "Cap",
-    "name": "Tee Time 5-Panel Hat",
+    "name": "Tee Time 5-Panel CAP",
     "seller": "Addidas",
     "price": 24,
     "stock": 1,
@@ -717,7 +717,7 @@
   {
     "id": "f6a5e6c0-5aec-4f10-84d7-bde9b6199045",
     "category": "Cap",
-    "name": "Baseball Cap",
+    "name": "Baseball CAP",
     "seller": "Addidas",
     "price": 17,
     "stock": 7,
@@ -730,7 +730,7 @@
   {
     "id": "625b4b60-611c-490c-ac0a-f3c2d2afd05c",
     "category": "Cap",
-    "name": "Relaxed Strap-Back Hat",
+    "name": "Relaxed Strap-Back CAP",
     "seller": "Addidas",
     "price": 24,
     "stock": 9,
@@ -743,7 +743,7 @@
   {
     "id": "5960bf40-9603-4a39-9ff6-6cf9f1ce4815",
     "category": "Cap",
-    "name": "UNISEX ORIGINALS WASHED BUCKET",
+    "name": "UNISEX ORIGINALS WASHED BUCKET CAP",
     "seller": "Addidas",
     "price": 27,
     "stock": 14,
@@ -756,7 +756,7 @@
   {
     "id": "5991add1-f4ba-4fb9-9b6b-ec59aa2dda60",
     "category": "Cap",
-    "name": "SST Plus Strap-Back Hat",
+    "name": "SST Plus Strap-Back CAP",
     "seller": "Addidas",
     "price": 23,
     "stock": 14,
@@ -769,7 +769,7 @@
   {
     "id": "5690e579-a943-4b42-9ffe-dfc65b71c560",
     "category": "Cap",
-    "name": "Dispatch Trucker Hat",
+    "name": "Dispatch Trucker CAP",
     "seller": "Addidas",
     "price": 28,
     "stock": 16,
@@ -782,7 +782,7 @@
   {
     "id": "be7a4d0a-c681-416c-ab8d-f9be28223f4e",
     "category": "Earphones",
-    "name": "adidas Z.N.E. 01 True Wireless Earbuds",
+    "name": "adidas Z.N.E. 01 True Wireless EARPHONES",
     "seller": "Addidas",
     "price": 142,
     "stock": 11,
@@ -795,7 +795,7 @@
   {
     "id": "b278e667-ca17-465c-b603-af1af4319b7b",
     "category": "Earphones",
-    "name": "adidas Z.N.E. 01 ANC True Wireless Earbuds",
+    "name": "adidas Z.N.E. 01 ANC True Wireless EARPHONES",
     "seller": "Addidas",
     "price": 135,
     "stock": 16,
@@ -808,7 +808,7 @@
   {
     "id": "1f56c0e5-4407-44bf-9225-90f592d2924a",
     "category": "Earphones",
-    "name": "FWD-01 Sport In-Ear Headphones",
+    "name": "FWD-01 Sport In-Ear EARPHONES",
     "seller": "Addidas",
     "price": 185,
     "stock": 8,
@@ -821,7 +821,7 @@
   {
     "id": "4ead4708-68e8-4a93-b28e-5e99ccc4d75c",
     "category": "Earphones",
-    "name": "adidas FWD-02 Sport True Wireless Earbuds",
+    "name": "adidas FWD-02 Sport True Wireless EARPHONES",
     "seller": "Addidas",
     "price": 162,
     "stock": 14,
@@ -834,7 +834,7 @@
   {
     "id": "d1116075-10f2-49c4-985e-0d41e19ce1b3",
     "category": "Earphones",
-    "name": "adidas Z.N.E. 01 ANC True Wireless Earbuds",
+    "name": "adidas Z.N.E. 01 ANC True Wireless EARPHONES",
     "seller": "Addidas",
     "price": 110,
     "stock": 15,
@@ -847,7 +847,7 @@
   {
     "id": "d1116075-10f2-49c4-985e-fg41e19dc1b8",
     "category": "Earphones",
-    "name": "RPT-01 Sport On-Ear Headphones",
+    "name": "RPT-01 Sport On-Ear EARPHONES",
     "seller": "Addidas",
     "price": 170,
     "stock": 15,
@@ -860,7 +860,7 @@
   {
     "id": "9e7cda87-8160-458f-bd32-ecf253a2d86a",
     "category": "Bottle",
-    "name": "Steel Metal Bottle 1L",
+    "name": "Steel Metal BOTTLE 1L",
     "seller": "Addidas",
     "price": 33,
     "stock": 7,
@@ -873,7 +873,7 @@
   {
     "id": "eaff8921-f7eb-446f-b072-d96559685de0",
     "category": "Bottle",
-    "name": "Steel Metal Bottle 1L",
+    "name": "Steel Metal BOTTLE 1L",
     "seller": "Addidas",
     "price": 40,
     "stock": 14,
@@ -886,7 +886,7 @@
   {
     "id": "96fd22a5-f22f-4ad8-b7b5-f1cfd0852553",
     "category": "Bottle",
-    "name": "Steel Metal Bottle 1 L",
+    "name": "Steel Metal BOTTLE 1 L",
     "seller": "Addidas",
     "price": 46,
     "stock": 2,
@@ -899,7 +899,7 @@
   {
     "id": "e1a7c529-f91b-4ef5-a661-c2317c5c314e",
     "category": "Bottle",
-    "name": "Steel Metal Bottle 1L",
+    "name": "Steel Metal BOTTLE 1L",
     "seller": "Addidas",
     "price": 20,
     "stock": 14,
@@ -912,7 +912,7 @@
   {
     "id": "e912ad01-2551-48dc-a709-4054cbfbcbbc",
     "category": "Bottle",
-    "name": "Steel Metal Bottle 600 ML",
+    "name": "Steel Metal BOTTLE 600 ML",
     "seller": "Addidas",
     "price": 43,
     "stock": 19,
@@ -925,7 +925,7 @@
   {
     "id": "afc5d640-9943-437a-b644-ba1f6f12baa9",
     "category": "Bottle",
-    "name": "Steel Straw Metal Bottle 600 ML",
+    "name": "Steel Straw Metal BOTTLE 600 ML",
     "seller": "Addidas",
     "price": 43,
     "stock": 10,
@@ -938,7 +938,7 @@
   {
     "id": "5b5c43d9-950d-4b9a-b7d9-ca489224a7b2",
     "category": "Bottle",
-    "name": "Steel Metal Bottle 600 ML",
+    "name": "Steel Metal BOTTLE 600 ML",
     "seller": "Addidas",
     "price": 26,
     "stock": 20,
@@ -951,7 +951,7 @@
   {
     "id": "96239c09-8b1c-4c81-99f9-f43e7613eab3",
     "category": "Bottle",
-    "name": "Squad Glass Bottle 720 ML",
+    "name": "Squad Glass BOTTLE 720 ML",
     "seller": "Addidas",
     "price": 39,
     "stock": 20,
@@ -964,7 +964,7 @@
   {
     "id": "30698483-f7aa-49ba-9de9-9070f64dc263",
     "category": "Bottle",
-    "name": "Steel Bottle 600 ML",
+    "name": "Steel BOTTLE 600 ML",
     "seller": "Addidas",
     "price": 23,
     "stock": 11,
@@ -977,7 +977,7 @@
   {
     "id": "02871edc-272b-4e20-bcc2-b32681213b3c",
     "category": "Bottle",
-    "name": "Steel Metal Bottle 2L",
+    "name": "Steel Metal BOTTLE 2L",
     "seller": "Addidas",
     "price": 37,
     "stock": 14,

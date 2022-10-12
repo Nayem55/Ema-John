@@ -1,136 +1,160 @@
 .shop-container {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 
 .product-container {
-    padding: 80px 144px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  padding: 80px 144px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
+
+.search {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+.search input{
+    border-radius: 0%;
+    color: #2a414f;
+    border: 1px solid #ff9900;
+    padding: 15px;
+    outline-color: #ff9900;
+}
+.search button{
+    width: 140px;
+    background-color: #2a414f;
+    color: white;
+    border: 1px solid #2a414f;
+}
+.search button:hover{
+    color: #ff9900;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid #ff9900;
+}
+
 
 .cart-container {
-    width: 100%;
-    position: sticky;
-    top: 75px;
-    height: 100vh;
-    background-color: #FFE0B3;
-    transition: all 500ms ease-in;
+  width: 100%;
+  position: sticky;
+  top: 75px;
+  height: 100vh;
+  background-color: #ffe0b3;
+  transition: all 500ms ease-in;
 }
 
-
-.cart-icon{
-    color: #FF9900;
+.cart-icon {
+  color: #ff9900;
 }
-
 
 .btn-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 05px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 05px;
 }
 
 .btn-container button {
-    color: white;
-    height: 48px;
-    margin: 5px;
-    border: none;
-    width: 50%;
+  color: white;
+  height: 48px;
+  margin: 5px;
+  border: none;
+  width: 50%;
 }
 
 .clear {
-    background-color: #FF3030;
+  background-color: #ff3030;
 }
 
 .clear:hover {
-    background-color: #ff303000;
-    border: 2px solid #FF3030;
-    color: black;
-
+  background-color: #ff303000;
+  border: 2px solid #ff3030;
+  color: black;
 }
 
 .review {
-    background-color: #FF9900;
-
+  background-color: #ff9900;
 }
 
 .review:hover {
-    background-color: #ff990000;
-    border: 2px solid #FF9900;
-    color: black;
+  background-color: #ff990000;
+  border: 2px solid #ff9900;
+  color: black;
 }
 
 .cart-info {
-    padding: 10px 20px;
-    color: #2A414F;
+  padding: 10px 20px;
+  color: #2a414f;
 }
 
 .total {
-    padding-left: 20px;
-    margin-bottom: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
-
-
-
 @media (max-width: 1749px) {
-    .product-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .clear {
+    height: 40px;
+  }
 
-    .clear {
-        height: 40px;
-    }
-
-    .review {
-        height: 40px;
-    }
-
+  .review {
+    height: 40px;
+  }
 }
 
 @media (max-width: 991px) {
-    .shop-container {
-        display: flex;
-        flex-direction: column-reverse;
-        width: auto;
-    }
+  .shop-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+  }
 
-    .product-container {
-        padding: 80px 10px;
-    }
+  .product-container {
+    padding: 80px 10px;
+  }
 
-    .cart-container {
-        height: auto;
-        padding-top: 10px;
-    }
+  .cart-container {
+    height: auto;
+    padding-top: 10px;
+  }
 
-    .hide{
-        position: absolute;
-        top: -700px;
-    }
+  .hide {
+    position: absolute;
+    top: -700px;
+  }
 
-    .show{
-        position: relative;
-    }
+  .show {
+    position: relative;
+  }
+  .search{
+    width: 80%;
+  }
 }
 
 @media (max-width: 700px) {
-    .product-container {
-        display: flex;
-        flex-direction: column;
-        margin-top: 0px;
-        align-items: center;
-    }
+  .product-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    align-items: center;
+  }
 
-    .cart-container {
-        margin: 00px 00px;
-        border: 1px solid #2A414F;
-        height: auto;
-    }
+  .cart-container {
+    margin: 00px 00px;
+    border: 1px solid #2a414f;
+    height: auto;
+  }
 
-    .cart-info {
-        padding: 0px 20px;
-    }
+  .cart-info {
+    padding: 0px 20px;
+  }
+  .search{
+    width: 90%;
+  }
 }
