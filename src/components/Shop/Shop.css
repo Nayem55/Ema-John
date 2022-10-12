@@ -40,6 +40,7 @@
   width: 100%;
   position: sticky;
   top: 75px;
+  padding-top: 20px;
   height: 100vh;
   background-color: #ffe0b3;
   transition: all 500ms ease-in;
