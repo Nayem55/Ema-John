@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../images/Logo.svg";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import {faCartPlus,faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
@@ -41,7 +41,7 @@ const Header = ({open , setOpen}) => {
               <Link to="/orders">Orders</Link>
               <Link to="/inventory">Inventory</Link>
               <Link to="/about">About</Link>
-             {user? <Link to="/login" onClick={handleSignOut}>Sign out</Link> : <Link to="/login">Login</Link>}
+             {user? <Link to="/login" onClick={handleSignOut}><FontAwesomeIcon icon={faArrowRightFromBracket}></FontAwesomeIcon></Link> : <Link to="/login">Login</Link>}
             </ul>
           </div>
         </div>

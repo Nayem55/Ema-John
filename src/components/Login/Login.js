@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useEffect } from "react";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import img from "./google.jpg";
@@ -15,15 +19,18 @@ const Login = () => {
   const location = useLocation();
   const from = location.state?.from.pathname || "/";
 
+  useEffect(() => {
+    if (user || user1) {
+      navigate(from, { replace: true });
+    }
+  }, [user, user1,from]);
+
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
-  if (user||user1) {
-    navigate(from, { replace: true });
-  }
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -54,8 +61,10 @@ const Login = () => {
               required
             />
           </div>
-          <p style={{ color: "red" }}>{error?.message||error1?.message}</p>
-          <p style={{ color: "green" }}>{(loading||loading1) && "Signing in..."}</p>
+          <p style={{ color: "red" }}>{error?.message || error1?.message}</p>
+          <p style={{ color: "green" }}>
+            {(loading || loading1) && "Signing in..."}
+          </p>
           <input className="submit" type="submit" value="Login" />
           <p className="login-text">
             New to Ema-john? <Link to="/signup">Create New Account</Link>{" "}
@@ -65,7 +74,7 @@ const Login = () => {
             <p>or</p>
             <hr />
           </div>
-          <button onClick={()=>signInWithGoogle()} className="google-login">
+          <button onClick={() => signInWithGoogle()} className="google-login">
             {" "}
             <img src={img} alt="" /> Continue with Google
           </button>
