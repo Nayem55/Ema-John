@@ -4,7 +4,7 @@ import './SignUp.css'
 import img from '../Login/google.jpg'
 import { useState } from 'react';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 
 const SignUp = () => {
     const[email,setEmail] = useState('');
@@ -12,6 +12,7 @@ const SignUp = () => {
     const[confirmPassword,setConfirmPassword] = useState('');
     const[error,setError] = useState('');
     const [createUserWithEmailAndPassword,user] = useCreateUserWithEmailAndPassword(auth);
+    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
 
 
@@ -24,7 +25,7 @@ const SignUp = () => {
     const handleConfirmPassword=e=>{
         setConfirmPassword(e.target.value);
     }
-    if(user){
+    if(user||user1){
         navigate('/shop')
     }
     const handleSignUp=(e)=>{
@@ -59,7 +60,7 @@ const SignUp = () => {
                     <label htmlFor="confirm-password">Confirm Password</label> <br />
                     <input onBlur={handleConfirmPassword} type="password" name="confirm-password" id="" required />
                 </div>
-                <p style={{color:'red'}} >{error}</p>
+                <p style={{color:'red'}} >{error||error1?.message}</p>
                 <input className='submit' type="submit" value="Sign Up" />
                 <p className='login-text'>Already have an account? <Link to="/login">Login</Link> </p>
                 <div className='divider'>
@@ -67,7 +68,7 @@ const SignUp = () => {
                       <p>or</p>
                       <hr/> 
                 </div>
-                <button className='google-login'> <img src={img} alt="" /> Continue with Google</button>
+                <button onClick={()=>signInWithGoogle()} className='google-login'> <img src={img} alt="" /> Continue with Google</button>
             </div>
         </form>
         </div>
