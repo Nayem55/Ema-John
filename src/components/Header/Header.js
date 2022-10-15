@@ -2,48 +2,80 @@ import React from "react";
 import logo from "../../images/Logo.svg";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faCartPlus,faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartPlus,
+  faArrowRightFromBracket,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { signOut } from "firebase/auth";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const Header = ({open , setOpen}) => {
+const Header = ({ open, setOpen }) => {
+  const [navOpen, setNavOpen] = useState(false);
+  const [scroll, setScroll] = useState(0);
   const [user] = useAuthState(auth);
-  const handleSignOut=()=>{
-    signOut(auth)
-  }
-  
+  const handleSignOut = () => {
+    signOut(auth);
+    setNavOpen(false);
+  };
+  window.addEventListener("scroll", () => {
+    setScroll(window.scrollY);
+  });
+  useEffect(() => {
+    setOpen(false);
+  }, [scroll]);
   return (
     <div className="fixed-top">
-      <nav className="navbar navbar-expand-lg navbar-dark header">
-        <div className="container-fluid ">
+      <nav className="header">
+        <div className="nav-icons">
           <img src={logo} alt="" />
-          <FontAwesomeIcon onClick={()=>setOpen(!open)} className="cart-icon" icon={faCartPlus }></FontAwesomeIcon>
-          <button
-            className="navbar-toggler mb-2 bg-1 mt-2"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
 
-          <div
-            className="collapse navbar-collapse navLink"
-            id="navbarTogglerDemo01"
+          <FontAwesomeIcon
+            onClick={() => {
+              setOpen(!open);
+              setNavOpen(false);
+            }}
+            className="cart-icon"
+            icon={faCartPlus}
+          ></FontAwesomeIcon>
+
+          <button
+            className="nav-menu"
+            onClick={() => {
+              setOpen(false);
+              setNavOpen(!navOpen);
+            }}
           >
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <Link to="/shop">Shop</Link>
-              <Link to="/orders">Orders</Link>
-              <Link to="/inventory">Inventory</Link>
-              <Link to="/about">About</Link>
-             {user? <Link to="/login" onClick={handleSignOut}><FontAwesomeIcon icon={faArrowRightFromBracket}></FontAwesomeIcon></Link> : <Link to="/login">Login</Link>}
-            </ul>
-          </div>
+            <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+          </button>
+        </div>
+
+        <div className={`navLink ${navOpen ? "navShow" : "navHide"}`}>
+          <Link onClick={() => setNavOpen(false)} to="/shop">
+            Shop
+          </Link>
+          <Link onClick={() => setNavOpen(false)} to="/orders">
+            Orders
+          </Link>
+          <Link onClick={() => setNavOpen(false)} to="/inventory">
+            Inventory
+          </Link>
+          <Link onClick={() => setNavOpen(false)} to="/about">
+            About
+          </Link>
+          {user ? (
+            <Link to="/login" onClick={handleSignOut}>
+              <FontAwesomeIcon icon={faArrowRightFromBracket}></FontAwesomeIcon>
+            </Link>
+          ) : (
+            <Link onClick={() => setNavOpen(false)} to="/login">
+              Login
+            </Link>
+          )}
         </div>
       </nav>
     </div>

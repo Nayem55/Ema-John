@@ -2,10 +2,12 @@
     width: 100vw;
     height: auto;
     background-color: #1C2B35;
-    padding: 10px 140px;
+    padding: 20px 140px;
     font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 .navLink a {
     text-decoration: none;
     padding: 15px;
@@ -18,19 +20,37 @@
 .navLink a:focus {
     color: orange;
 }
-
+.nav-icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 .cart-icon {
     display: none;
 }
-
+.nav-menu{
+ display: none;
+ background-color: #1C2B35;
+ color: white;
+ padding: 7px 14px;
+ border: 1px solid gray;
+}
 
 @media (max-width: 991px) {
     .header {
-        padding: 10px;
+        padding: 20px;
         font-family: leto;
+        display: flex;
+        flex-direction: column;
     }
 
-
+    .navLink{
+        display: flex;
+        flex-direction: column;
+        transition: all 500ms ease-in;
+        background-color: #1C2B35;
+        width: 100%;
+    }
     .navLink a:hover {
         background-color: orange;
         color: white;
@@ -46,6 +66,20 @@
         height: 25px;
         margin-left: auto;
         margin-right: 15px;
+    }
+    .nav-menu{
+     display: block;
+    }
+    
+    .navShow{
+        position: absolute;
+        top: 80px;
+        right: 0;
+    }
+    .navHide{
+        position: absolute;
+        top: 80px;
+        right: -600px;
     }
 
 }
