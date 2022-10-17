@@ -27,6 +27,7 @@ const Header = ({ open, setOpen }) => {
   });
   useEffect(() => {
     setOpen(false);
+    setNavOpen(false)
   }, [scroll]);
   return (
     <div className="fixed-top">
