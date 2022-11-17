@@ -8,8 +8,10 @@ import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import useProduct from "../../hooks/useProduct";
 
 const Shop = ({ open }) => {
+  const [Allproducts]= useProduct();
   const [products,setProducts]= useState([]);
   const [cart, setCart] = useCart();
   const navigate = useNavigate();
@@ -22,7 +24,7 @@ const Shop = ({ open }) => {
       fetch(`http://localhost:5000/products?page=${page}&size=10`)
         .then((res) => res.json())
         .then((data) => setProducts(data));
-    }, [page ]);
+    }, [page]);
 
   useEffect(()=>{
     fetch('http://localhost:5000/productCount')
@@ -34,8 +36,8 @@ const Shop = ({ open }) => {
     })
   },[])
 
-  const searchedProducts = products.filter((product) => product.name.includes(searchText?.toUpperCase()));
-  
+  const searchedProducts = Allproducts.filter((product) => product.name.includes(searchText?.toUpperCase()));
+
   const handleSearch = () => {
     setSearchText(searchRef.current.value);
   };
