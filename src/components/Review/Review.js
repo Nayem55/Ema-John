@@ -14,7 +14,7 @@ const Review = ({product , removeItem}) => {
             <div className="order-details">
                 <div>
                     <h5 className='pe-4' title={name}>
-                    { name.length > 20 ? name.slice(0, 20) + '...' : name} 
+                    { name?.length > 20 ? name.slice(0, 20) + '...' : name} 
                     </h5>
                     <h6>Price : <span>${price} </span></h6>
                     <h6>Quantity : <span>{quantity} </span> </h6>

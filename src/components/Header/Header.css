@@ -8,6 +8,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.navLink{
+    display: flex;
+}
 .navLink a {
     text-decoration: none;
     padding: 15px;

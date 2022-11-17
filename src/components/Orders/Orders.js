@@ -5,7 +5,6 @@ import "./Orders.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Review from "../Review/Review";
-import { removeFromDb } from "../../utilities/fakedb";
 import { useNavigate } from "react-router-dom";
 
 const Orders = ({ open }) => {
@@ -29,9 +28,19 @@ const Orders = ({ open }) => {
   });
 
   const removeItem = (item) => {
-    const rest = cart.filter((product) => product.id !== item.id);
+    fetch('http://localhost:5000/cart',{
+      method:'delete',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(item)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data)
+    })
+    const rest = cart.filter((product) => product._id !== item._id);
     setCart(rest);
-    removeFromDb(item.id);
   };
   return (
     <div className="order-container ">
@@ -39,7 +48,7 @@ const Orders = ({ open }) => {
         <h2>
           {cart.map((product) => (
             <Review
-              key={product.id}
+              key={product._id}
               product={product}
               removeItem={removeItem}
             ></Review>

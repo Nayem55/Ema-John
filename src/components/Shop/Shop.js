@@ -1,41 +1,81 @@
 import React from "react";
 import Product from "../Product/Product";
-import { addToDb } from "../../utilities/fakedb";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./Shop.css";
-import useProduct from "../../hooks/useProduct";
 import useCart from "../../hooks/useCart";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Shop = ({ open }) => {
-  const [products] = useProduct();
-  const [cart, setCart] = useCart(products);
+  const [products,setProducts]= useState([]);
+  const [cart, setCart] = useCart();
   const navigate = useNavigate();
   const searchRef = useRef();
   const [searchText, setSearchText] = useState();
-  const searchedProducts = products.filter(
-    (product) => product.name.includes(searchText?.toUpperCase())
-  );
+  const [pageCount, setPageCount] = useState(0);
+  const [page, setPage] = useState(0);
+
+  useEffect(() => {
+      fetch(`http://localhost:5000/products?page=${page}&size=10`)
+        .then((res) => res.json())
+        .then((data) => setProducts(data));
+    }, [page ]);
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/productCount')
+    .then(res=>res.json())
+    .then(data=>{
+      const count = data.count;
+      const pages = Math.ceil(count/10);
+      setPageCount(pages);
+    })
+  },[])
+
+  const searchedProducts = products.filter((product) => product.name.includes(searchText?.toUpperCase()));
+  
   const handleSearch = () => {
     setSearchText(searchRef.current.value);
   };
 
   const handleCart = (selectedProduct) => {
     let newCart = [];
-    const exist = cart.find((product) => product.id === selectedProduct.id);
+    const exist = cart.find((product) => product._id === selectedProduct._id);
     if (!exist) {
       selectedProduct.quantity = 1;
-      newCart = [...cart, selectedProduct];
-    } else {
-      const rest = cart.filter((product) => product.id !== selectedProduct.id);
-      exist.quantity = exist.quantity + 1;
-      newCart = [...rest, exist];
+      fetch('http://localhost:5000/cart',{
+        method:'post',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(selectedProduct)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        console.log(data)
+      })
+      newCart = [...cart,selectedProduct];
     }
+    
+    else {
+      exist.quantity=exist.quantity+1;
+      fetch('http://localhost:5000/cart',{
+        method:'put',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(exist)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        console.log(data)
+      })
+      const rest = cart.filter(item=>item._id!==exist._id)
+      newCart = [...rest,exist];
+     }
     setCart(newCart);
-    addToDb(selectedProduct.id);
   };
 
   const clearCart = () => {
@@ -69,19 +109,24 @@ const Shop = ({ open }) => {
           {searchText
             ? searchedProducts.map((product) => (
                 <Product
-                  key={product.id}
+                  key={product._id}
                   product={product}
                   handleCart={handleCart}
                 ></Product>
               ))
             : products.map((product) => (
                 <Product
-                  key={product.id}
+                  key={product._id}
                   product={product}
                   handleCart={handleCart}
                 ></Product>
               ))
               }
+        </div>
+        <div className="pages">
+          {
+            [...Array(pageCount).keys()].map(index=><button className={page===index ? 'selected' : ''} onClick={()=>setPage(index)}>{index+1}</button>)
+          }
         </div>
       </div>
 

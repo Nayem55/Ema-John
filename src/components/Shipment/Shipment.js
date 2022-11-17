@@ -34,19 +34,19 @@ const Shipment = () => {
                 <h2 className='form-title'>Shipping Information</h2>
                 <div className="input-grp">
                     <label htmlFor="name">Your Name</label> <br />
-                    <input onBlur={handleName} type="text" name="name" id="" required />
+                    <input className='ps-3' onBlur={handleName} type="text" name="name" id="" required />
                 </div>
                 <div className="input-grp">
                     <label htmlFor="email">Your Email</label> <br />
-                    <input value={user?.email} readOnly type="email" name="email" id="" required />
+                    <input className='ps-3' value={user?.email} readOnly type="email" name="email" id="" required />
                 </div>
                 <div className="input-grp">
                     <label htmlFor="address">Your Address</label> <br />
-                    <input onBlur={handleAddress} type="text" name="address" id="" required />
+                    <input className='ps-3' onBlur={handleAddress} type="text" name="address" id="" required />
                 </div>
                 <div className="input-grp">
                     <label htmlFor="phone">Phone Number</label> <br />
-                    <input onBlur={handlePhone} type="text" name="phone" id="" required />
+                    <input className='ps-3' onBlur={handlePhone} type="text" name="phone" id="" required />
                 </div>
                 <button className="submit shipment" onClick={()=>navigate('/purchase')} >
                   Purchase Order

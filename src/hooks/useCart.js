@@ -7,17 +7,20 @@ const useCart=(products)=>{
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-      const storedCart = getStoredCart();
-      const savedCart = [];
-      for (const id in storedCart) {
-        const addedProduct = products.find((product) => product.id === id);
-        if (addedProduct) {
-          const quantity = storedCart[id];
-          addedProduct.quantity = quantity;
-          savedCart.push(addedProduct);
-        }
-      }
-      setCart(savedCart);
+      fetch('http://localhost:5000/cart')
+      .then(res=>res.json())
+      .then(data=>setCart(data))
+      // const storedCart = getStoredCart();
+      // const savedCart = [];
+      // for (const _id in storedCart) {
+      //   const addedProduct = products.find((product) => product._id === _id);
+      //   if (addedProduct) {
+      //     const quantity = storedCart[_id];
+      //     addedProduct.quantity = quantity;
+      //     savedCart.push(addedProduct);
+      //   }
+      // }
+      // setCart(savedCart);
     }, [products]);
 
     return [cart, setCart];

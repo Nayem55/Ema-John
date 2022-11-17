@@ -8,6 +8,25 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+.pages{
+  text-align: center;
+  margin-bottom: 60px;
+}
+.pages button{
+  margin-left: 10px;
+  background-color: #ffe0b3;
+  color: #2a414f;
+  border: 1px solid #2a4f4e69;
+  padding: 10px 15px;
+}
+.pages button:hover{
+  background-color: #ff9900;
+  color: white;
+}
+.pages .selected{
+  background-color: #ff9900;
+  color: white;
+}
 
 .search {
   display: block;
@@ -148,8 +167,8 @@
 
   .cart-container {
     margin: 00px 00px;
-    border: 1px solid #2a414f;
     height: auto;
+    padding-bottom: 30px;
   }
 
   .cart-info {
