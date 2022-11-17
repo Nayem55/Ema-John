@@ -13,7 +13,17 @@ const Orders = ({ open }) => {
   const navigate = useNavigate();
 
   const clearCart = () => {
-    localStorage.removeItem("shopping-cart");
+    fetch('http://localhost:5000/cart',{
+      method:'delete',
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data)
+    })
+    
     setCart([]);
   };
 
@@ -69,13 +79,10 @@ const Orders = ({ open }) => {
             <button onClick={clearCart} className="clear">
               Clear Cart <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
             </button>
-            {/* <Link className="w-100" to={"/purchase"} > */}
                 <button onClick={()=>navigate('/shipment')} className="review">
                   Proceed Order
                   <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
-                </button>
-            {/* </Link> */}
-           
+                </button>           
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Review = ({product , removeItem}) => {
     const {name,price,quantity} = product
-
+    
     return (
         <div className='d-flex review-order'>
             <img className='img-fluid order-img' src={product.img} alt="" />

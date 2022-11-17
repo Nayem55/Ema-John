@@ -81,7 +81,16 @@ const Shop = ({ open }) => {
   };
 
   const clearCart = () => {
-    localStorage.removeItem("shopping-cart");
+    fetch('http://localhost:5000/cart',{
+      method:'delete',
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data)
+    })
     setCart([]);
   };
   let price = 0;
@@ -133,7 +142,7 @@ const Shop = ({ open }) => {
       </div>
 
       <div className="sticky-top">
-        <div className={`cart-container ${open ? "show" : "hide"} `}>
+        <div className={`cart-container ${open ? "show" : "hide"}`}>
           <h2 className="text-center pt-1">Order summary</h2>
           <div className="cart-info">
             <p>Selected Items: {quantity}</p>
