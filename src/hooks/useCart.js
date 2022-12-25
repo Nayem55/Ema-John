@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { getStoredCart } from "../utilities/fakedb";
 
 const useCart=(products)=>{
 
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-      fetch('http://localhost:5000/cart')
+      fetch('https://ema-john-server-nayemweb10.vercel.app/cart')
       .then(res=>res.json())
       .then(data=>setCart(data))
       // const storedCart = getStoredCart();

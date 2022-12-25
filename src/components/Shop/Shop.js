@@ -21,13 +21,13 @@ const Shop = ({ open }) => {
   const [page, setPage] = useState(0);
 
   useEffect(() => {
-      fetch(`http://localhost:5000/products?page=${page}&size=10`)
+      fetch(`https://ema-john-server-nayemweb10.vercel.app/products?page=${page}&size=10`)
         .then((res) => res.json())
         .then((data) => setProducts(data));
     }, [page]);
 
   useEffect(()=>{
-    fetch('http://localhost:5000/productCount')
+    fetch('https://ema-john-server-nayemweb10.vercel.app/productCount')
     .then(res=>res.json())
     .then(data=>{
       const count = data.count;
@@ -47,7 +47,7 @@ const Shop = ({ open }) => {
     const exist = cart.find((product) => product._id === selectedProduct._id);
     if (!exist) {
       selectedProduct.quantity = 1;
-      fetch('http://localhost:5000/cart',{
+      fetch('https://ema-john-server-nayemweb10.vercel.app/cart',{
         method:'post',
         headers: {
           'content-type': 'application/json'
@@ -63,7 +63,7 @@ const Shop = ({ open }) => {
     
     else {
       exist.quantity=exist.quantity+1;
-      fetch('http://localhost:5000/cart',{
+      fetch('https://ema-john-server-nayemweb10.vercel.app/cart',{
         method:'put',
         headers: {
           'content-type': 'application/json'
@@ -81,7 +81,7 @@ const Shop = ({ open }) => {
   };
 
   const clearCart = () => {
-    fetch('http://localhost:5000/cart',{
+    fetch('https://ema-john-server-nayemweb10.vercel.app/cart',{
       method:'delete',
       headers: {
         'content-type': 'application/json'

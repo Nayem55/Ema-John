@@ -4,7 +4,7 @@ const useProduct=()=>{
     const [Allproducts,setAllProducts]= useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/allproducts")
+        fetch("https://ema-john-server-nayemweb10.vercel.app/allproducts")
           .then((res) => res.json())
           .then((data) => setAllProducts(data));
       }, []);

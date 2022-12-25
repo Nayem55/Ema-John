@@ -13,7 +13,7 @@ const Orders = ({ open }) => {
   const navigate = useNavigate();
 
   const clearCart = () => {
-    fetch('http://localhost:5000/cart',{
+    fetch('https://ema-john-server-nayemweb10.vercel.app/cart',{
       method:'delete',
       headers: {
         'content-type': 'application/json'
@@ -38,7 +38,7 @@ const Orders = ({ open }) => {
   });
 
   const removeItem = (item) => {
-    fetch('http://localhost:5000/cart',{
+    fetch('https://ema-john-server-nayemweb10.vercel.app/cart',{
       method:'delete',
       headers: {
         'content-type': 'application/json'
