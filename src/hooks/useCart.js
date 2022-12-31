@@ -6,7 +6,7 @@ const useCart=(products)=>{
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-      fetch('https://ema-john-server-nayemweb10.vercel.app/cart')
+      fetch('https://ema-john-server-ta34.onrender.com/cart')
       .then(res=>res.json())
       .then(data=>setCart(data))
       // const storedCart = getStoredCart();
