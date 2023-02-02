@@ -4,7 +4,7 @@ const useProduct=()=>{
     const [Allproducts,setAllProducts]= useState([]);
 
     useEffect(() => {
-        fetch("https://ema-john-server-ta34.onrender.com/allproducts")
+        fetch("https://ema-john-server-black.vercel.app/allproducts")
           .then((res) => res.json())
           .then((data) => setAllProducts(data));
       }, []);
